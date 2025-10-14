@@ -3,11 +3,13 @@ import { useState, useEffect, useRef, FC, FormEvent } from "react";
 import * as info from "@/Constant/Constant";
 import { useRouter } from "next/navigation";
 
+// Define the type for a single history entry
 interface HistoryItem {
   cmd: string;
   res: string | string[];
 }
 
+// Define the type for the commands object
 interface Commands {
   [key: string]: string | string[];
 }
@@ -24,7 +26,7 @@ const commands: Commands = {
   github: info.github,
   resume: info.resume,
   clear: "clear",
-  normal: "Navigating to portfolio...",
+  normal: "Navigating to portfolio...", // Response text for the command
 };
 
 const App: FC = () => {
@@ -34,8 +36,9 @@ const App: FC = () => {
   const [history, setHistory] = useState<HistoryItem[]>([
     { cmd: "himanshu@portfolio:~$ <br>", res: commands.banner },
   ]);
-  const [isExiting, setIsExiting] = useState<boolean>(false); 
+  const [isExiting, setIsExiting] = useState<boolean>(false);
   const inputRef = useRef<HTMLInputElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null); // Ref for the auto-scroll target
 
   useEffect(() => {
     if (inputRef.current) {
@@ -50,6 +53,13 @@ const App: FC = () => {
     return () => window.removeEventListener("click", handleClick);
   }, []);
 
+  // New useEffect hook for auto-scrolling
+  useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [history]); // Dependency array ensures this runs when history changes
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const command = input.toLowerCase().trim();
@@ -63,14 +73,14 @@ const App: FC = () => {
     if (command === "normal") {
       setHistory([
         ...history,
-        { cmd: "himanshu@portfolio:~$ " + input, res: commands.portfolio },
+        { cmd: "himanshu@portfolio:~$ " + input, res: commands.normal },
       ]);
       setInput("");
-      setIsExiting(true); 
+      setIsExiting(true);
       setTimeout(() => {
         router.push("/normal");
-      }, 500); 
-      return; 
+      }, 500);
+      return;
     }
 
     const output = commands[command] || `Command not found: ${input}. Try 'help'.`;
@@ -115,6 +125,8 @@ const App: FC = () => {
               )}
             </div>
           ))}
+           {/* Empty div at the end of the list to act as a scroll target */}
+          <div ref={scrollRef}></div>
         </div>
         <form onSubmit={handleSubmit} className="form">
           <span className="prompt">{"himanshu@portfolio:~$  "}</span>

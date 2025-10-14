@@ -9,7 +9,7 @@ export var help: string[] = [
   '<span class="command">contact</span>            View my socials',
   '<span class="command">resume</span>             Download my resume',
   '<span class="command">clear</span>              Clear terminal',
-  '<span class="command">normal </span>              Normal Porfolio',
+  '<span class="command">normal</span>             Go to normal portfolio',
   "<br>",
 ];
 
@@ -167,4 +167,3 @@ export var banner: string[] = [
   "<span class='color2'>Tip: Try running</span> <span class='command'>'projects'</span> <span class='color2'>or</span> <span class='command'>'aboutme'</span> <span class='color2'>to get started.</span>",
   "<br>",
 ];
-
