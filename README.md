@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+# Portfolio Website: Terminal Based
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This is a **terminal-style portfolio website** built with **Next.js** and **TailwindCSS**, inspired by the look and feel of a Linux terminal. Instead of a traditional portfolio with static pages, users can interact with the site using **commands** just like in a command-line interface.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+  - Interactive **command-line interface** (type `help` to see available commands).
+  - Built with **Next.js** for fast performance and **Server-Side Rendering (SSR)**.
+  - **ASCII banner** greeting and system info (OS, Kernel, Host, etc.).
+  - Commands to explore:
+      - `aboutme` → Learn more about me.
+      - `projects` → View my highlighted projects.
+      - `experience` → Check out my professional background.
+      - `education` → See my academic history.
+      - `skills` → My technical skills.
+      - `social` → Links to my GitHub, LinkedIn, and email.
+      - `resume` → Download my resume directly.
+      - `clear` → Clear the terminal screen.
+  - Deployed and hosted on **Vercel**.
+  - Minimal and lightweight design with a **blinking cursor effect** for real terminal vibes. 🚀
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This portfolio not only showcases my **projects** and **skills** but also reflects my **creativity and love for Linux/terminal environments**.
 
-## Learn More
+-----
 
-To learn more about Next.js, take a look at the following resources:
+## Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  - **Framework:** [Next.js](https://nextjs.org/)
+  - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+  - **Version Control:** [Git](https://git-scm.com/) & [GitHub](https://github.com/)
+  - **Deployment:** [Vercel](https://vercel.com/)
+  - **Package Manager:** [pnpm](https://pnpm.io/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+-----
 
-## Deploy on Vercel
+## Installation and Setup
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To get a local copy up and running, follow these simple steps.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/Himanshu-Khairnar/portfolio.git
+    ```
+2.  **Navigate to the project directory:**
+    ```bash
+    cd portfolio
+    ```
+3.  **Install dependencies:**
+    ```bash
+    pnpm install
+    ```
+4.  **Run the development server:**
+    ```bash
+    pnpm run dev
+    ```
+
+-----
+
+## Demo
+
+You can view a live demo of the project here:
+
+[https://portfolio-git-main-himasnhu-khairnars-projects.vercel.app/](https://portfolio-git-main-himasnhu-khairnars-projects.vercel.app/)
+
+-----
+
+## Authors
+
+  - [@Himanshu-Khairnar](https://www.github.com/Himanshu-Khairnar)
