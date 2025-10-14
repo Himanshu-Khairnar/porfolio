@@ -3,13 +3,11 @@ import { useState, useEffect, useRef, FC, FormEvent } from "react";
 import * as info from "@/Constant/Constant";
 import { useRouter } from "next/navigation";
 
-// Define the type for a single history entry
 interface HistoryItem {
   cmd: string;
   res: string | string[];
 }
 
-// Define the type for the commands object
 interface Commands {
   [key: string]: string | string[];
 }
@@ -26,7 +24,7 @@ const commands: Commands = {
   github: info.github,
   resume: info.resume,
   clear: "clear",
-  normal: "Navigating to portfolio...", // Response text for the command
+  normal: "Navigating to portfolio...", 
 };
 
 const App: FC = () => {
@@ -38,7 +36,7 @@ const App: FC = () => {
   ]);
   const [isExiting, setIsExiting] = useState<boolean>(false);
   const inputRef = useRef<HTMLInputElement>(null);
-  const scrollRef = useRef<HTMLDivElement>(null); // Ref for the auto-scroll target
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (inputRef.current) {
@@ -53,13 +51,11 @@ const App: FC = () => {
     return () => window.removeEventListener("click", handleClick);
   }, []);
 
-  // New useEffect hook for auto-scrolling
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollIntoView({ behavior: "smooth" });
     }
-  }, [history]); // Dependency array ensures this runs when history changes
-
+  }, [history]);
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const command = input.toLowerCase().trim();
@@ -125,7 +121,6 @@ const App: FC = () => {
               )}
             </div>
           ))}
-           {/* Empty div at the end of the list to act as a scroll target */}
           <div ref={scrollRef}></div>
         </div>
         <form onSubmit={handleSubmit} className="form">

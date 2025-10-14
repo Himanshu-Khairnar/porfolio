@@ -62,7 +62,7 @@ To get a local copy up and running, follow these simple steps.
 
 You can view a live demo of the project here:
 
-[https://portfolio-git-main-himasnhu-khairnars-projects.vercel.app/](https://portfolio-git-main-himasnhu-khairnars-projects.vercel.app/)
+[https://porfolio-git-main-himasnhu-khairnars-projects.vercel.app/](https://porfolio-git-main-himasnhu-khairnars-projects.vercel.app/)
 
 -----
 
