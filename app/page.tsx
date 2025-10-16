@@ -95,7 +95,7 @@ const App: FC = () => {
 
   return (
     <div
-      className={`transition-opacity duration-500 ease-in-out ${
+      className={`transition-opacity duration-500 ease-in-out p-[2rem] ${
         isExiting ? "opacity-0" : "opacity-100"
       }`}
     >

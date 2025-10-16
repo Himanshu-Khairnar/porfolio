@@ -1,7 +1,19 @@
-import React from 'react'
+import { HeroSection } from "@/components/sections/HeroSection";
+// import { AboutSection } from "@/components/sections/AboutSection";
+// import { ProjectsSection } from "@/components/sections/ProjectsSection";
+// import { ExperienceSection } from "@/components/sections/ExperienceSection";
+// import { ContactSection } from "@/components/sections/ContactSection";
+// import { FooterSection } from "@/components/sections/FooterSection";
 
-export default function page() {
+export default function HomePage() {
   return (
-    <div>page</div>
-  )
+    <main className="">
+      <HeroSection />
+      {/* <AboutSection />
+      <ProjectsSection />
+      <ExperienceSection />
+      <ContactSection />
+      <FooterSection /> */}
+    </main>
+  );
 }
