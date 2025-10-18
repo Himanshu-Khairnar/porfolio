@@ -1,4 +1,4 @@
-export var help: string[] = [
+export const help: string[] = [
   "<br>",
   '<span class="command">aboutme</span>         Who am I?',
   '<span class="command">experience</span>      View my relevant work experience',
@@ -12,7 +12,7 @@ export var help: string[] = [
   "<br>",
 ];
 
-export var aboutme: string[] = [
+export const aboutme: string[] = [
   "<br>",
   "Hello, I'm <span class='white-glow'>Himanshu</span>! 👋",
   "<br>",
@@ -39,13 +39,13 @@ export var aboutme: string[] = [
   "<br>",
 ];
 
-export var github: string[] = [
+export const github: string[] = [
   "<br>",
   'You can find most of my projects on <a href="https://github.com/Himanshhu-Khairnar"><span class="green-glow">GitHub</span></a>.',
   "<br>",
 ];
 
-export var experience: string[] = [
+export const experience: string[] = [
   "<br>",
   "I've worked on some of the following at these places 👨‍💻",
   "<br>",
@@ -59,7 +59,7 @@ export var experience: string[] = [
   "<br>",
 ];
 
-export var education: string[] = [
+export const education: string[] = [
   "<br>",
   "My educational journey 🎓",
   "<br>",
@@ -75,13 +75,13 @@ export var education: string[] = [
   "<br>",
 ];
 
-export var resume: string[] = [
+export const resume: string[] = [
   "<br>",
   `You can download my resume from <a href="/Resume.pdf" target="_blank"><span class="green-glow">here</span></a>.`,
   "<br>",
 ];
 
-export var skills: string[] = [
+export const skills: string[] = [
   "<br>",
   "My technical skills ⚡",
   "<br>",
@@ -102,7 +102,7 @@ export var skills: string[] = [
   "<br>",
 ];
 
-export var social: string[] = [
+export const social: string[] = [
   "<br>",
   "Write me:",
   "  │",
@@ -112,7 +112,7 @@ export var social: string[] = [
   "<br>",
 ];
 
-export var projects: string[] = [
+export const projects: string[] = [
   "<br>",
   "Most of my projects are on GitHub... ⚙️",
   "<br>",
@@ -135,7 +135,7 @@ export var projects: string[] = [
   "<br>",
 ];
 
-export var banner: string[] = [
+export const banner: string[] = [
   `<pre class="green-glow">  
 ██╗  ██╗██╗███╗   ███╗ █████╗ ███╗   ██╗███████╗██╗  ██╗██╗   ██╗    ██╗  ██╗██╗  ██╗ █████╗ ██╗██████╗ ███╗   ██╗ █████╗ ██████╗ 
 ██║  ██║██║████╗ ████║██╔══██╗████╗  ██║██╔════╝██║  ██║██║   ██║    ██║ ██╔╝██║  ██║██╔══██╗██║██╔══██╗████╗  ██║██╔══██╗██╔══██╗
@@ -158,7 +158,7 @@ export var banner: string[] = [
   "<br>",
 ];
 
-export var achievements: string[] = [
+export const achievements: string[] = [
   "<br>",
   "A few of my accomplishments 🏆",
   "<br>",
