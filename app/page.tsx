@@ -1,7 +1,10 @@
+// src/app/page.tsx
 "use client";
 import { useState, useEffect, useRef, FC, FormEvent } from "react";
-import * as info from "@/Constant/Constant";
+import * as info from "@/lib/constants"; // Adjust path if needed
 import { useRouter } from "next/navigation";
+// Make sure you are importing your global CSS file in your layout.tsx or here
+// import "./globals.css";
 
 interface HistoryItem {
   cmd: string;
@@ -23,8 +26,8 @@ const commands: Commands = {
   banner: info.banner,
   github: info.github,
   resume: info.resume,
+  achievements: info.achievements,
   clear: "clear",
-  normal: "Navigating to portfolio...", 
 };
 
 const App: FC = () => {
@@ -56,30 +59,22 @@ const App: FC = () => {
       scrollRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [history]);
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const command = input.toLowerCase().trim();
 
     if (!command) {
-      setHistory([...history, { cmd: "himanshu@portfolio:~$ " + input, res: "" }]);
-      setInput("");
-      return;
-    }
-
-    if (command === "normal") {
       setHistory([
         ...history,
-        { cmd: "himanshu@portfolio:~$ " + input, res: commands.normal },
+        { cmd: "himanshu@portfolio:~$ " + input, res: "" },
       ]);
       setInput("");
-      setIsExiting(true);
-      setTimeout(() => {
-        router.push("/normal");
-      }, 500);
       return;
     }
 
-    const output = commands[command] || `Command not found: ${input}. Try 'help'.`;
+    const output =
+      commands[command] || `Command not found: ${input}. Try 'help'.`;
 
     if (command === "clear") {
       setHistory([{ cmd: "himanshu@portfolio:~$ ", res: commands["banner"] }]);
@@ -94,35 +89,40 @@ const App: FC = () => {
   };
 
   return (
-    <div
-      className={`transition-opacity duration-500 ease-in-out p-[2rem] ${
-        isExiting ? "opacity-0" : "opacity-100"
-      }`}
-    >
+    <div className={`wrapper ${isExiting ? "opacity-0" : "opacity-100"}`}>
       <div className="circleButton">
         <span className="roundCircle circleColorRed "></span>
         <span className="roundCircle circleColorYellow"></span>
         <span className="roundCircle circleColorGreen"></span>
       </div>
       <div>
-        <div>
-          {history.map((h, i) => (
-            <div key={i}>
-              <p
-                className="textColor"
-                dangerouslySetInnerHTML={{ __html: h.cmd }}
-              ></p>
-              {Array.isArray(h.res) ? (
-                h.res.map((line, idx) => (
-                  <div key={idx} dangerouslySetInnerHTML={{ __html: line }}></div>
-                ))
-              ) : (
-                <div dangerouslySetInnerHTML={{ __html: h.res }}></div>
-              )}
-            </div>
-          ))}
-          <div ref={scrollRef}></div>
-        </div>
+        {" "}
+        {/* Main content container */}
+        {history.map((h, i) => (
+          // ADDED SPACING TO THIS DIV
+          <div key={i} style={{ marginBottom: "0.5rem" }}>
+            <p
+              className="textColor"
+              style={{ marginBottom: "0.25rem" }} // This adds space between cmd and output
+              dangerouslySetInnerHTML={{ __html: h.cmd }}
+            ></p>
+            {Array.isArray(h.res) ? (
+              h.res.map((line, idx) => (
+                <div
+                  key={idx}
+                  dangerouslySetInnerHTML={{ __html: line }}
+                  className="output-pre"
+                ></div>
+              ))
+            ) : (
+              <div
+                dangerouslySetInnerHTML={{ __html: h.res }}
+                className="output-pre"
+              ></div>
+            )}
+          </div>
+        ))}
+        <div ref={scrollRef}></div>
         <form onSubmit={handleSubmit} className="form">
           <span className="prompt">{"himanshu@portfolio:~$  "}</span>
           <div className="form-flex">

@@ -1,15 +1,14 @@
 export var help: string[] = [
   "<br>",
-  '<span class="command">aboutme</span>            Who am I?',
-  '<span class="command">experience</span>         View my relevant work experience',
-  '<span class="command">skills</span>             View my technical skills',
-  '<span class="command">education</span>          See where and what I study',
-  '<span class="command">resume</span>             Did you save my CV?',
-  '<span class="command">projects</span>           View my projects',
-  '<span class="command">contact</span>            View my socials',
-  '<span class="command">resume</span>             Download my resume',
-  '<span class="command">clear</span>              Clear terminal',
-  '<span class="command">normal</span>             Go to normal portfolio',
+  '<span class="command">aboutme</span>         Who am I?',
+  '<span class="command">experience</span>      View my relevant work experience',
+  '<span class="command">skills</span>          View my technical skills',
+  '<span class="command">education</span>       See where and what I study',
+  '<span class="command">resume</span>          Did you save my CV?',
+  '<span class="command">projects</span>        View my projects',
+  '<span class="command">contact</span>         View my socials',
+  '<span class="command">achievements</span>    My achievements',
+  '<span class="command">clear</span>           Clear terminal',
   "<br>",
 ];
 
@@ -67,12 +66,12 @@ export var education: string[] = [
   "<span class='white-glow'>DJ Sanghvi College of Engineering</span>",
   "  ├─ Bachelor's program: Artificial Intelligence And Machine Learning Engineering (2025 - 2028, Ongoing)",
   "  └─ Relevant classes: Data Structures & Algorithms, Database Management Systems,",
-  "                       Web Development, Operating Systems, Software Engineering.",
+  "                      Web Development, Operating Systems, Software Engineering.",
   "<br>",
   "<span class='white-glow'>Government Polytechnic Mumbai</span>",
   "  ├─ Diploma in Computer Engineering (2022 - 2025)",
   "  └─ Relevant classes: Programming in C/C++, Computer Networks, Database Systems,",
-  "                       Object-Oriented Programming, Web Technologies.",
+  "                      Object-Oriented Programming, Web Technologies.",
   "<br>",
 ];
 
@@ -86,26 +85,20 @@ export var skills: string[] = [
   "<br>",
   "My technical skills ⚡",
   "<br>",
-
   "<span class='white-glow'>Frontend Development</span>",
   "  └─ React.js, Next.js, TailwindCSS, Shadcn/UI, JavaScript (ES6+), HTML5, CSS3",
-
   "<br>",
   "<span class='white-glow'>Backend Development</span>",
   "  └─ Python (Flask, FastAPI), Node.js, Express.js, REST APIs",
-
   "<br>",
   "<span class='white-glow'>Databases</span>",
   "  └─ MySQL, PostgreSQL, MongoDB, SQLite",
-
   "<br>",
   "<span class='white-glow'>Tools & Platforms</span>",
   "  └─ Git, GitHub, Appwrite, Docker, Linux, Postman",
-
   "<br>",
   "<span class='white-glow'>Other Skills</span>",
   "  └─ Cybersecurity Basics, Cloud Fundamentals (AWS), Problem Solving, Data Structures & Algorithms",
-
   "<br>",
 ];
 
@@ -113,9 +106,9 @@ export var social: string[] = [
   "<br>",
   "Write me:",
   "  │",
-  '  ├─ <span class="white-glow">email</span>      <a href="mailto:himanshuk1205@gmail.com" target="_blank">himanshuk1205@gmail.com</a>',
-  '  ├─ <span class="white-glow">linkedin</span>   <a href="https://www.linkedin.com/in/himanshu-khairnar-9908a6288/" target="_blank">linkedin.com/in/himanshu-khairnar-9908a6288/</a>',
-  '  └─ <span class="white-glow">github</span>     <a href="https://github.com/Himanshu-Khairnar" target="_blank">github.com/Himanshu-Khairnar</a>',
+  '  ├─ <span class="white-glow">email</span>    <a href="mailto:himanshuk1205@gmail.com" target="_blank">himanshuk1205@gmail.com</a>',
+  '  ├─ <span class="white-glow">linkedin</span> <a href="https://www.linkedin.com/in/himanshu-khairnar-9908a6288/" target="_blank">linkedin.com/in/himanshu-khairnar-9908a6288/</a>',
+  '  └─ <span class="white-glow">github</span>   <a href="https://github.com/Himanshu-Khairnar" target="_blank">github.com/Himanshu-Khairnar</a>',
   "<br>",
 ];
 
@@ -123,37 +116,34 @@ export var projects: string[] = [
   "<br>",
   "Most of my projects are on GitHub... ⚙️",
   "<br>",
-
   "<span class='white-glow'>VideoStreamer 🎬</span>",
   "  ├─ A web application to stream and manage video content,",
   "  │  allowing users to upload, view, search, and categorize videos.",
   "  │  Integrated features include video transcoding, user authentication, and playlists.",
   '  └─ <i> React, Node.js, Express, MongoDB, AWS S3 </i> | <a href="https://github.com/Himanshu-Khairnar/VideoStreamer" target="_blank">GitHub</a>',
-
   "<br>",
   "<span class='white-glow'>Blog Application 📝</span>",
   "  ├─ A full-featured blog application where users can register, authenticate,",
   "  │  create, edit, and delete posts. Includes features like responsive UI,",
   "  │  secure authentication, and optimized performance.",
   '  └─ <i> React, TailwindCSS, Appwrite, Clerk, Shadcn/UI </i> | <a href="https://github.com/Himanshu-Khairnar/AppWriteProjectBlog" target="_blank">GitHub</a>',
-
   "<br>",
   "<span class='white-glow'>Doctor Appointment App 👨‍⚕️</span>",
   "  ├─ A responsive appointment booking app where patients can schedule,",
   "  │  view, and manage doctor visits. Includes secure auth & role-based flows.",
   '  └─ <i> Next.js, React, Appwrite, Shadcn </i> | <a href="https://github.com/Himanshu-Khairnar/Doctor-Appointment-next-js" target="_blank">GitHub</a>',
-
   "<br>",
 ];
 
 export var banner: string[] = [
   `<pre class="green-glow">  
-░  ░░░░  ░░        ░░  ░░░░  ░░░      ░░░   ░░░  ░░░      ░░░  ░░░░  ░░  ░░░░  ░░░░░░░░  ░░░░  ░░  ░░░░  ░░░      ░░░        ░░       ░░░   ░░░  ░░░      ░░░       ░░
-▒  ▒▒▒▒  ▒▒▒▒▒  ▒▒▒▒▒   ▒▒   ▒▒  ▒▒▒▒  ▒▒    ▒▒  ▒▒  ▒▒▒▒▒▒▒▒  ▒▒▒▒  ▒▒  ▒▒▒▒  ▒▒▒▒▒▒▒▒  ▒▒▒  ▒▒▒  ▒▒▒▒  ▒▒  ▒▒▒▒  ▒▒▒▒▒  ▒▒▒▒▒  ▒▒▒▒  ▒▒    ▒▒  ▒▒  ▒▒▒▒  ▒▒  ▒▒▒▒  ▒
-▓        ▓▓▓▓▓  ▓▓▓▓▓        ▓▓  ▓▓▓▓  ▓▓  ▓  ▓  ▓▓▓      ▓▓▓        ▓▓  ▓▓▓▓  ▓▓▓▓▓▓▓▓     ▓▓▓▓▓        ▓▓  ▓▓▓▓  ▓▓▓▓▓  ▓▓▓▓▓       ▓▓▓  ▓  ▓  ▓▓  ▓▓▓▓  ▓▓       ▓▓
-█  ████  █████  █████  █  █  ██        ██  ██    ████████  ██  ████  ██  ████  ████████  ███  ███  ████  ██        █████  █████  ███  ███  ██    ██        ██  ███  ██
-█  ████  ██        ██  ████  ██  ████  ██  ███   ███      ███  ████  ███      █████████  ████  ██  ████  ██  ████  ██        ██  ████  ██  ███   ██  ████  ██  ████  █
-                                                                                                                                                                      </pre>`,
+██╗  ██╗██╗███╗   ███╗ █████╗ ███╗   ██╗███████╗██╗  ██╗██╗   ██╗    ██╗  ██╗██╗  ██╗ █████╗ ██╗██████╗ ███╗   ██╗ █████╗ ██████╗ 
+██║  ██║██║████╗ ████║██╔══██╗████╗  ██║██╔════╝██║  ██║██║   ██║    ██║ ██╔╝██║  ██║██╔══██╗██║██╔══██╗████╗  ██║██╔══██╗██╔══██╗
+███████║██║██╔████╔██║███████║██╔██╗ ██║███████╗███████║██║   ██║    █████╔╝ ███████║███████║██║██████╔╝██╔██╗ ██║███████║██████╔╝
+██╔══██║██║██║╚██╔╝██║██╔══██║██║╚██╗██║╚════██║██╔══██║██║   ██║    ██╔═██╗ ██╔══██║██╔══██║██║██╔══██╗██║╚██╗██║██╔══██║██╔══██╗
+██║  ██║██║██║ ╚═╝ ██║██║  ██║██║ ╚████║███████║██║  ██║╚██████╔╝    ██║  ██╗██║  ██║██║  ██║██║██║  ██║██║ ╚████║██║  ██║██║  ██║
+╚═╝  ╚═╝╚═╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝ ╚═════╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝  ╚═╝
+                                                                                                                      </pre>`,
   '<span class="color2">Welcome to my portfolio website with an interactive terminal.</span>',
   '<span class="color2">To get a list of available commands, type</span> <span class="command">\'help\'</span><span class="color2">.</span>',
   "<br>",
@@ -165,5 +155,28 @@ export var banner: string[] = [
   "<span class='white-glow'>Shell:</span> Interactive Web Terminal",
   "<br>",
   "<span class='color2'>Tip: Try running</span> <span class='command'>'projects'</span> <span class='color2'>or</span> <span class='command'>'aboutme'</span> <span class='color2'>to get started.</span>",
+  "<br>",
+];
+
+export var achievements: string[] = [
+  "<br>",
+  "A few of my accomplishments 🏆",
+  "<br>",
+
+  "<span class='white-glow'>Hackathon Winner - CODE QUEST</span>",
+  "  ├─ Won 1st Place in the [University-level hackathon.",
+  "  └─ <i>EDUQUEST - gamified way for learning</i>",
+  "<br>",
+
+  "<span class='white-glow'>Academic Excellence (Diploma)</span>",
+  "  └─ Completed Diploma in Computer Engineering with 94.75% aggregate.",
+  "<br>",
+
+  "<span class='white-glow'>Google Developer Groups (GDG)</span>",
+  "  └─ Joined the core technical branch to help organize workshops and events.",
+  "<br>",
+
+  "<span class='white-glow'>CodeChef 4-Star Coder</span>",
+  "  └─ Achieved a max rating of 1850+ in competitive programming contests.",
   "<br>",
 ];
